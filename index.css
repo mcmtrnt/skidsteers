@@ -251,10 +251,10 @@ margin-top: 2rem;
 }
 
 .equipment-grid {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
+    gap: 20px; */
+    max-width: 300px;
     margin: 0 auto;
 }
 
