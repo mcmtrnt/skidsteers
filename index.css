@@ -249,3 +249,96 @@ margin-top: 2rem;
     margin-top: 3rem;
 }
 }
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.equipment-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.equipment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.equipment-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #e0e0e0;
+}
+
+.equipment-details {
+    padding: 16px;
+}
+
+.equipment-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.equipment-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0066cc;
+    margin-bottom: 12px;
+}
+
+.equipment-location {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.equipment-location::before {
+    content: "📍";
+}
+
+.equipment-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.equipment-footer {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.equipment-meta {
+    font-size: 12px;
+    color: #888;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    margin-top: 12px;
+}
+
+.contact-phone {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
