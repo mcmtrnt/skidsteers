@@ -132,9 +132,31 @@
             <h2 class="text-center" data-aos="fade-up">Available inventory</h2>
             <div class="equipment-grid" data-aos="fade-up">
     <!-- Equipment Card 1 -->
-     <!-- <div class="equipment-card" style="opacity: 0;"></div> -->
                 <div class="equipment-card">
-                    <img src="/images/logo.png" alt="2016 Bobcat T590" class="equipment-image">
+                    <div class="image-carousel" data-carousel="0">
+                        <img src="/images/IMG_2701.jpeg" alt="2016 Bobcat T590" class="equipment-image active">
+                        <img src="/images/IMG_2698.jpeg" alt="Bobcat view 2" class="equipment-image">
+                        <img src="/images/IMG_2699.jpeg" alt="Bobcat view 3" class="equipment-image">
+                        <img src="/images/IMG_2700.jpeg" alt="Bobcat view 4" class="equipment-image">
+                        <img src="/images/IMG_2702.jpeg" alt="Bobcat view 5" class="equipment-image">
+                        <img src="/images/IMG_2703.jpeg" alt="Bobcat view 6" class="equipment-image">
+
+                        <button class="carousel-btn prev" onclick="changeImage(0, -1)">‹</button>
+                        <button class="carousel-btn next" onclick="changeImage(0, 1)">›</button>
+                        
+                        <div class="image-counter">
+                            <span class="current-image">1</span> / <span class="total-images">4</span>
+                        </div>
+                        
+                        <div class="image-dots">
+                            <span class="dot active" onclick="goToImage(0, 0)"></span>
+                            <span class="dot" onclick="goToImage(0, 1)"></span>
+                            <span class="dot" onclick="goToImage(0, 2)"></span>
+                            <span class="dot" onclick="goToImage(0, 3)"></span>
+                            <span class="dot" onclick="goToImage(0, 4)"></span>
+                            <span class="dot" onclick="goToImage(0, 5)"></span>
+                        </div>
+                    </div>
                     <div class="equipment-details">
                         <div class="equipment-title">2016 Bobcat T590</div>
                         <div class="equipment-price">Contact for Price</div>
@@ -238,6 +260,53 @@
                 });
             });
 
+        });
+    </script>
+    <script>
+        function changeImage(carouselId, direction) {
+            const carousel = document.querySelectorAll('[data-carousel]')[carouselId];
+            const images = carousel.querySelectorAll('.equipment-image');
+            const dots = carousel.querySelectorAll('.dot');
+            const counter = carousel.querySelector('.current-image');
+            
+            let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            
+            images[currentIndex].classList.remove('active');
+            dots[currentIndex].classList.remove('active');
+            
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            
+            images[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+            counter.textContent = currentIndex + 1;
+        }
+
+        function goToImage(carouselId, index) {
+            const carousel = document.querySelectorAll('[data-carousel]')[carouselId];
+            const images = carousel.querySelectorAll('.equipment-image');
+            const dots = carousel.querySelectorAll('.dot');
+            const counter = carousel.querySelector('.current-image');
+            
+            images.forEach(img => img.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            images[index].classList.add('active');
+            dots[index].classList.add('active');
+            counter.textContent = index + 1;
+        }
+
+        function scrollToContact() {
+            // Add your contact section scroll logic here
+            alert('Contact form would open or scroll to contact section');
+        }
+
+        // Optional: Add keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                changeImage(0, -1);
+            } else if (e.key === 'ArrowRight') {
+                changeImage(0, 1);
+            }
         });
     </script>
     <script>
