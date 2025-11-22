@@ -3,541 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium skid steers and mini excavators for sale. High-quality construction equipment with competitive pricing and an established record of reliability.">
-    <meta name="keywords" content="skid steers for sale, skidsteer for sale south jordan, mini excavators for sale, construction equipment, skid steer loader, compact excavator, heavy equipment">
-    <title>Skid Steers & Mini Excavators for Sale | Salt Lake City Equipment</title>
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-orange: #ea580c;
-            --primary-orange-dark: #c2410c;
-            --dark-bg: #0f172a;
-            --dark-bg-secondary: #1e293b;
-            --dark-bg-tertiary: #334155;
-        }
+    <title>Salt Lake City Equipment | Skidsteers For Sale</title>
+    <link rel="icon" type="image/x-icon" href="/images/coton logo.png">
+    <meta name="description" content="High-quality, inspected construction equipment ready to power your next project. Competitive pricing and equipment you can trust.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17673895273">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--dark-bg);
-            color: #fff;
-        }
-
-        .hero-section {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #7c2d12 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.1;
-        }
-
-        .hero-section .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .navbar {
-            background: transparent !important;
-            padding: 1.5rem 0;
-        }
-
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #fff !important;
-        }
-
-        .navbar-nav .nav-link {
-            color: #fff !important;
-            margin: 0 1rem;
-            transition: color 0.3s;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: var(--primary-orange) !important;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-orange);
-            border-color: var(--primary-orange);
-            font-weight: 600;
-            padding: 0.75rem 1.5rem;
-            transition: all 0.3s;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-orange-dark);
-            border-color: var(--primary-orange-dark);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: var(--dark-bg-tertiary);
-            border-color: var(--dark-bg-tertiary);
-            font-weight: 600;
-            padding: 0.75rem 1.5rem;
-        }
-
-        .hero-content {
-            padding: 6rem 0;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: bold;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-        }
-
-        .section-bg-dark {
-            background-color: var(--dark-bg-secondary);
-        }
-
-        .section-bg-darker {
-            background-color: var(--dark-bg);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card {
-            background-color: var(--dark-bg-tertiary);
-            padding: 2rem;
-            border-radius: 1rem;
-            transition: all 0.3s;
-            height: 100%;
-        }
-
-        .feature-card:hover {
-            background-color: #475569;
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            color: var(--primary-orange);
-            margin-bottom: 1rem;
-        }
-
-        .filter-btn {
-            margin: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            font-weight: 600;
-        }
-
-        .filter-btn.active {
-            background-color: var(--primary-orange);
-            border-color: var(--primary-orange);
-        }
-
-        .equipment-card {
-            background-color: var(--dark-bg-secondary);
-            border-radius: 1rem;
-            overflow: hidden;
-            transition: all 0.3s;
-            height: 100%;
-        }
-
-        .equipment-card:hover {
-            transform: scale(1.05);
-        }
-
-        .equipment-img {
-            height: 250px;
-            object-fit: cover;
-            width: 100%;
-        }
-
-        .price-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background-color: var(--primary-orange);
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            font-weight: bold;
-            font-size: 1.125rem;
-        }
-
-        .spec-item {
-            background-color: var(--dark-bg-tertiary);
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .spec-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-        }
-
-        .spec-value {
-            font-weight: 600;
-        }
-
-        .contact-card {
-            background-color: var(--dark-bg-secondary);
-            padding: 2rem;
-            border-radius: 1rem;
-            text-align: center;
-        }
-
-        .contact-icon {
-            font-size: 2.5rem;
-            color: var(--primary-orange);
-            margin-bottom: 1rem;
-        }
-
-        .form-control, .form-select {
-            background-color: var(--dark-bg-tertiary);
-            border-color: #475569;
-            color: #fff;
-            padding: 0.75rem 1rem;
-        }
-
-        .form-control:focus, .form-select:focus {
-            background-color: var(--dark-bg-tertiary);
-            border-color: var(--primary-orange);
-            color: #fff;
-            box-shadow: 0 0 0 0.25rem rgba(234, 88, 12, 0.25);
-        }
-
-        footer {
-            background-color: #020617;
-            padding: 2rem 0;
-        }
-
-        .text-orange {
-            color: var(--primary-orange);
-        }
-
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    gtag('config', 'AW-17673895273');
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <section class="hero-section">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <i class="fas fa-wrench me-2"></i>Salt Lake City Equipment
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#inventory">Inventory</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary ms-3">Get Quote</a>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero Content -->
-        <div class="container hero-content">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h1 class="hero-title">Premium Skid Steers & Mini Excavators <span class="text-orange">For Sale</span></h1>
-                    <p class="hero-subtitle">High-quality, inspected construction equipment ready to power your next project. Competitive pricing and equipment you can trust.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#inventory" class="btn btn-primary btn-lg">Browse Inventory</a>
-                        <a href="#contact" class="btn btn-secondary btn-lg">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="py-5 section-bg-dark">
-        <div class="container py-4">
-            <h2 class="section-title text-center mb-5">Why Choose Salt Lake City Equipment</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <i class="fas fa-shield-alt feature-icon"></i>
-                        <h3 class="h4 mb-3">Certified Quality</h3>
-                        <p class="mb-0">Every machine is thoroughly inspected and serviced to ensure peak performance and reliability.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <i class="fas fa-clock feature-icon"></i>
-                        <h3 class="h4 mb-3">Fast Delivery</h3>
-                        <p class="mb-0">Quick turnaround times with delivery available throughout the region for your convenience.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <i class="fas fa-check-circle feature-icon"></i>
-                        <h3 class="h4 mb-3">Expert Support</h3>
-                        <p class="mb-0">Knowledgeable team ready to help you find the perfect equipment for your specific needs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Inventory Section -->
-    <section id="inventory" class="py-5 section-bg-darker">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Available Inventory</h2>
-                <p class="lead mb-4">Browse our selection of premium skid steers and mini excavators</p>
-                
-                <!-- Filter Buttons -->
-                <!-- <div class="d-flex flex-wrap justify-content-center">
-                    <button class="btn btn-secondary filter-btn active" onclick="filterEquipment('all')">All Equipment</button>
-                    <button class="btn btn-secondary filter-btn" onclick="filterEquipment('skidsteer')">Skid Steers</button>
-                    <button class="btn btn-secondary filter-btn" onclick="filterEquipment('excavator')">Mini Excavators</button>
-                </div> -->
-            </div>
-
-            <div class="row g-4" id="equipmentGrid">
-                <!-- Equipment Card 1 -->
-                <div class="col-md-6 col-lg-4 equipment-item" style="margin-left: auto; margin-right: auto;" data-category="skidsteer">
-                    <div class="equipment-card">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&q=80" alt="Bobcat S650 Skid Steer" class="equipment-img">
-                            <div class="price-badge">Contact for pricing</div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="h4 mb-2">2016 Bobcat T590</h3>
-                            <p class="mb-3">Versatile skid-steer loader with excellent maneuverability and lifting capacity for any job site.</p>
-                            <div class="row g-2 mb-3">
-                                <div class="col-6">
-                                    <div class="spec-item">
-                                        <div class="spec-label">Enclosed cab</div>
-                                        <!-- <div class="spec-value">8,814 lbs</div> -->
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="spec-item">
-                                        <div class="spec-label">Heat and AC</div>
-                                        <!-- <div class="spec-value">2,200 lbs</div> -->
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="spec-item">
-                                        <div class="spec-label">High Flow</div>
-                                        <!-- <div class="spec-value">74 HP</div> -->
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="spec-item">
-                                        <div class="spec-label">900 Hours</div>
-                                        <!-- <div class="spec-value">1,250 hrs</div> -->
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="spec-item">
-                                        <div class="spec-label">SJC / Joystick controls</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#contact" class="btn btn-primary w-100">Request Info</a>
-                        </div>
-                    </div>
-                </div>
-  
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="py-5 section-bg-dark">
-        <div class="container py-4">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&q=80" alt="Construction Equipment" class="img-fluid rounded shadow-lg">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="section-title mb-4">About Salt Lake City Equipment</h2>
-                    <p class="lead mb-4">
-                        My goal is to help connect buyers with quality equipment that is in great condition and for a fair price. No one likes leaving the dealership lot knowing they instantly lost $10k just for leaving the parking lot.
-                    </p>
-                    <!-- <p class="lead mb-4">
-                        With over 15 years of experience in the construction equipment industry, Salt Lake City Equipment has built a reputation for providing high-quality skid steers and mini excavators to contractors, builders, and construction professionals.
-                    </p>
-                    <p class="mb-4">
-                        We carefully curate our inventory, ensuring every machine meets our rigorous standards for performance, reliability, and value. We have each piece of equipment inspected and serviced before it reaches your job site.
-                    </p>
-                    <p class="mb-4">
-                        Whether you're a small contractor or managing large-scale projects, we have the equipment and expertise to support your success.
-                    </p> -->
-                    <!-- <div class="d-flex flex-wrap gap-3 mt-4">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-check-circle text-orange me-2"></i>
-                            <span class="fw-bold">15+ Years Experience</span>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-check-circle text-orange me-2"></i>
-                            <span class="fw-bold">Certified Equipment</span>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-check-circle text-orange me-2"></i>
-                            <span class="fw-bold">Expert Support</span>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 section-bg-darker">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="lead">Ready to find the perfect equipment for your project? Contact us today for pricing and availability.</p>
-            </div>
-
-            <div class="row g-4 mb-5">
-                <div class="col-md-6" style="margin-left: auto; margin-right: auto;">
-                    <div class="contact-card">
-                        <i class="fas fa-phone contact-icon"></i>
-                        <h3 class="h5 mb-3">Phone</h3>
-                        <a href="tel:801-935-1133" class="text-orange text-decoration-none">(801) 935-1133</a>
-                    </div>
-                </div>
-                <!-- <div class="col-md-6">
-                    <div class="contact-card">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        <h3 class="h5 mb-3">Email</h3>
-                        <a href="mailto:sales@proequip.com" class="text-orange text-decoration-none">sales@proequip.com</a>
-                    </div>
-                </div> -->
-                <!-- <div class="col-md-4">
-                    <div class="contact-card">
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
-                        <h3 class="h5 mb-3">Location</h3>
-                        <p class=mb-0">123 Industrial Way<br>Your City, ST 12345</p>
-                    </div>
-                </div> -->
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card bg-dark border-0 shadow-lg">
-                        <div class="card-body p-4 p-md-5">
-                            <h3 class="h4 mb-4">Request a Quote</h3>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Email Address">
-                                </div>
-                                <div class="col-12">
-                                    <input type="tel" class="form-control" placeholder="Phone Number">
-                                </div>
-                                <div class="col-12">
-                                    <select class="form-select">
-                                        <option selected>Equipment Type</option>
-                                        <option value="skidsteer">Skid Steer</option>
-                                        <option value="excavator">Mini Excavator</option>
-                                        <option value="unsure">Not Sure</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control" rows="4" placeholder="Tell us about your project and equipment needs..."></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="button" class="btn btn-primary btn-lg w-100" onclick="submitQuote()">Send Request</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <p class="mb-2">&copy; 2025 Salt Lake City Equipment. All rights reserved.</p>
-            <p class="mb-0">Premium Skid Steers and Mini Excavators for Sale</p>
+            <a class="navbar-brand" href="#">Salt Lake City Equipment</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://instagram.com/diamondridgecotons" target="_blank">Available Equipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="logo-circle">
+                        <img src="/images/coton logo.png" alt="Salt Lake City Equipment Logo">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-content">
+                        <h1>WELCOME</h1>
+                        <!-- <p>Your Perfect Companion Awaits</p> -->
+                        <a href="#contact" class="btn btn-primary">Contact Us</a>
+                        <a href="https://instagram.com/diamondridgecotons" target="_blank" class="btn btn-primary">Available Equipment</a>
+                        <p>Shane 801-935-1133</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="puppies" style="padding: 4rem 0;">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">About Us</h2>
+            <div class="row" style="padding: 0 12%;" data-aos="fade-up">
+                <p style="text-align: center;">My goal is to help connect buyers with quality equipment that is in great condition and for a fair price. No one likes leaving the dealership lot knowing they instantly lost $10k just for leaving the parking lot.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item" data-aos="fade-up">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What is included with each puppy?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Each puppy is raised on an 8-week curriculum and will come home with basic crate training and potty training skills, first vaccinations, deworming, and a starter kit including a small food sample, a scented blanket, and detailed care instructions.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How do I reserve a puppy?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    To reserve a puppy, please contact us through our contact form. A non-refundable deposit is required to hold your puppy, and we operate on a first-come, first-served basis.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you deliver your puppies?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! We are available for on-site pickup if you're local to Utah, otherwise we connect you with our flight nanny who can deliver to your nearest airport for an additional fee. We can also meet you at our local airport (SLC INTL).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="puppies" class="gallery">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Available inventory</h2>
+            <p style="text-align: center;">Contact us for availability</p>
+            <div class="row">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="gallery-item">
+                        <img src="/images/puppyWhite.jpg" alt="Coton de Tulear Puppy">
+                        <div class="gallery-overlay">
+                            <div class="puppy-info">
+                                <ul>
+                                    <li>2016 Bobcat T590</li>
+                                    <button class="btn btn-light contact-btn" href="#contact">Contact Us</button>
+                                    <br><br>
+                                    <button class="btn btn-light">
+                                        <a href="https://instagram.com/diamondridgecotons" target="_blank" style="color: black; text-decoration: none;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram me-2" viewBox="0 0 16 16">
+                                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                            </svg>
+                                            Available Equipment
+                                        </a>
+                                    </button>
+                                    <br><br>
+                                    <li>Shane 801-935-1133</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="/images/puppyBlack.jpeg" alt="Coton de Tulear Puppy">
+                        <div class="gallery-overlay">
+                            <div class="puppy-info">
+                                <ul>
+                                    <li>Coton de Tulear</li>
+                                    <button class="btn btn-light contact-btn" href="#contact">Contact Us</button>
+                                    <br><br>
+                                    <button class="btn btn-light">
+                                        <a href="https://instagram.com/diamondridgecotons" target="_blank" style="color: black; text-decoration: none;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram me-2" viewBox="0 0 16 16">
+                                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                            </svg>
+                                            Available Pups
+                                        </a>
+                                    </button>
+                                    <br><br>
+                                    <li>Shane 801-935-1133</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="/images/puppyMulticolor.jpg" alt="Coton de Tulear Puppy">
+                        <div class="gallery-overlay">
+                            <div class="puppy-info">
+                                <ul>
+                                    <li>Coton de Tulear</li>
+                                    <button class="btn btn-light contact-btn" href="#contact">Contact Us</button>
+                                    <br><br>
+                                    <button class="btn btn-light">
+                                        <a href="https://instagram.com/diamondridgecotons" target="_blank" style="color: black; text-decoration: none;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram me-2" viewBox="0 0 16 16">
+                                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                            </svg>
+                                            Available Pups
+                                        </a>
+                                    </button>
+                                    <br><br>
+                                    <li>Shane 801-935-1133</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add similar structure for other gallery items -->
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Past equipment</h2>
+            <p style="text-align: center;">Contact us if there is a make/model you are looking for</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h2 class="text-center mb-2" data-aos="fade-up">Contact Us for Availablity</h2>
+                    <p style="text-align: center;">Shane 801-935-1133</p>
+                    <div class="contact-form" data-aos="fade-up">
+                        <form id="contactForm">
+                            <div id="submitBanner" style="display: none; text-align: center; margin-bottom: 1rem; border-bottom: 3px solid green;" class="row">
+                                <span>Thanks for reaching out! You can expect to hear back from us soon.</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                                </div>
+                            </div>                            
+                            <textarea class="form-control" rows="5" id="customer_message" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="instagram" class="instagram-feed py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Follow Us</h2>
+            <div class="text-center mb-4">
+                <a href="https://instagram.com/diamondridgecotons" target="_blank" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram me-2" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    </svg>
+                    See Our Equipment and Customer Reviews on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Salt Lake City Equipment. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        // Filter equipment by category
-        function filterEquipment(category) {
-            const items = document.querySelectorAll('.equipment-item');
-            const buttons = document.querySelectorAll('.filter-btn');
-            
-            // Update active button
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            // Filter items
-            items.forEach(item => {
-                if (category === 'all' || item.dataset.category === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true
             });
-        }
 
-        // Handle quote submission
-        function submitQuote() {
-            alert('Thank you for your interest! In a production site, this would submit your request to our sales team.');
-        }
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    const navHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
                     });
-                }
+                });
+            });
+
+        });
+    </script>
+    <script>
+        // ... (previous scripts remain the same) ...
+    
+        // Handle puppy inquiry buttons
+        document.querySelectorAll('.gallery-overlay .contact-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = document.getElementById('contactForm');
+            if (form.checkValidity()) {
+
+                var data = {
+                    service_id: 'service_9va8vvg',
+                    template_id: 'template_iqf8zub',
+                    user_id: '8ede1-J_4MRQi7-up',
+                    template_params: {
+                        name: document.getElementById('name').value,
+                        customer_message: document.getElementById('customer_message').value,
+                        phone: document.getElementById('phone').value,
+                        email: ''
+                    }
+                };
+                    
+                $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+                    type: 'POST',
+                    data: JSON.stringify(data),
+                    contentType: 'application/json'
+                }).then(function(response) {
+                    console.log('here2');
+                    clearModal();
+                    $("#submitBanner").show();
+                    setTimeout(function() {
+                        $("#submitBanner").hide();
+                    }, 3000);
+                }, function(error) {
+                    clearModal();
+                });
+            }
+            // form.classList.add('was-validated');
+        });
+
+        function clearModal()
+        {
+            document.getElementById('name').value = "";
+            document.getElementById('phone').value = "";
+            document.getElementById('customer_message').value = "";
+        }
+
     </script>
 </body>
 </html>
