@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Utah Equipment</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-card">
+            <img src="images/logo.png" alt="Utah Equipment" class="login-logo">
+            <h1>Admin Login</h1>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+                <p class="login-error" id="loginError"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="dashboard" style="display:none;">
+        <header class="admin-header">
+            <div class="container">
+                <div class="header-inner">
+                    <h1><a href="index.html">Utah Equipment</a> <span>Admin</span></h1>
+                    <div class="header-actions">
+                        <a href="index.html" class="btn btn-outline-sm">View Site</a>
+                        <button id="logoutBtn" class="btn btn-outline-sm">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <!-- Action Bar -->
+            <div class="action-bar">
+                <h2>Equipment Listings</h2>
+                <button id="addNewBtn" class="btn btn-primary">+ Add New Listing</button>
+            </div>
+
+            <!-- Listings Table -->
+            <div class="listings-table-wrapper">
+                <table class="listings-table" id="listingsTable">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Created</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listingsBody">
+                        <tr>
+                            <td colspan="7" style="text-align:center;padding:40px;color:#999;">Loading listings...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Add/Edit Modal -->
+        <div class="modal-overlay" id="listingModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Add New Listing</h2>
+                    <button class="modal-close" id="modalCloseBtn">&times;</button>
+                </div>
+                <form id="listingForm" class="modal-form">
+                    <input type="hidden" id="listingId">
+
+                    <div class="form-group">
+                        <label for="title">Title *</label>
+                        <input type="text" id="title" placeholder="e.g. 2016 Bobcat T590" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="text" id="price" placeholder="e.g. $54,500 or Contact for Price">
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category">
+                                <option value="equipment">Equipment</option>
+                                <option value="attachment">Attachment</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="e.g. Utah" value="Utah">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select id="status">
+                                <option value="available">Available</option>
+                                <option value="sold">Sold</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" rows="3" placeholder="Brief description of the equipment"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specs">Specs (one per line)</label>
+                        <textarea id="specs" rows="5" placeholder="Enclosed cab&#10;Heat and AC&#10;High Flow&#10;900 hours&#10;SJC / Joystick controls"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Contact Name</label>
+                            <input type="text" id="contactName" placeholder="Shane" value="Shane">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Contact Phone</label>
+                            <input type="text" id="contactPhone" placeholder="(801) 935-1133" value="(801) 935-1133">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Images</label>
+                        <div class="image-upload-area" id="imageUploadArea">
+                            <input type="file" id="imageInput" multiple accept="image/*" style="display:none;">
+                            <button type="button" class="btn btn-outline-sm" id="uploadBtn">Choose Images</button>
+                            <p class="upload-hint">Select multiple images. First image will be the cover photo.</p>
+                        </div>
+                        <div class="image-preview-grid" id="imagePreviewGrid"></div>
+                        <div class="upload-progress" id="uploadProgress" style="display:none;">
+                            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+                            <span id="progressText">Uploading...</span>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-cancel" id="cancelBtn">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="saveBtn">Save Listing</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Delete Confirm Modal -->
+        <div class="modal-overlay" id="deleteModal">
+            <div class="modal-content modal-sm">
+                <h2>Delete Listing</h2>
+                <p>Are you sure you want to delete this listing? This cannot be undone.</p>
+                <div class="form-actions">
+                    <button class="btn btn-cancel" id="deleteCancelBtn">Cancel</button>
+                    <button class="btn btn-danger" id="deleteConfirmBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>

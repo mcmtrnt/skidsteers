@@ -4,452 +4,287 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utah Equipment | Skidsteers For Sale</title>
-    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
     <meta name="description" content="High-quality, inspected construction equipment ready to power your next project. Competitive pricing and equipment you can trust.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="index.js"></script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17673895273">
-    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17673895273"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-17673895273');
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
         <div class="container">
-            <a class="navbar-brand" href="#">Utah Equipment</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <a href="tel:8019351133" class="top-bar-phone">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                (801) 935-1133
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Utah Equipment" class="navbar-logo">
+                <span>Utah Equipment</span>
+            </a>
+            <button class="navbar-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#equipment" target="_blank">Available Equipment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#faq">FAQ</a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="navbar-nav" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#equipment">Equipment</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="logo-circle">
-                        <img src="/images/logo.png" alt="Utah Equipment Logo">
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="hero-content">
-                        <h1>WELCOME</h1>
-                        <a href="#contact" class="btn btn-primary mt-1">Contact Us</a>
-                        <a href="#equipment" class="btn btn-primary mt-1">Available Equipment</a>
-                        <p class="mt-1">Shane 801-935-1133</p>
-                    </div>
-                </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-inner">
+            <h1>Quality Equipment You Can Trust</h1>
+            <p class="hero-subtitle">Owner-operated. Every machine inspected and ready to work. Fair prices, no dealership markup.</p>
+            <div class="hero-actions">
+                <a href="#equipment" class="btn btn-primary">View Inventory</a>
+                <a href="tel:8019351133" class="btn btn-outline">Call Shane: (801) 935-1133</a>
             </div>
         </div>
     </section>
 
-    <section id="about" style="padding: 4rem 0;">
+    <!-- Equipment Section -->
+    <section id="equipment" class="section">
         <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">About Us</h2>
-            <div class="row" style="padding: 0 12%;" data-aos="fade-up">
-                <p style="text-align: center;">My goal is to help connect buyers with quality equipment that is in great condition and for a fair price. No one likes leaving the dealership lot knowing they instantly lost $10k just for leaving the parking lot.</p>
+            <h2 class="section-title">Available Inventory</h2>
+            <div class="equipment-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="equipment">Equipment</button>
+                <button class="filter-btn" data-filter="attachment">Attachments</button>
+            </div>
+            <div class="equipment-grid" id="equipmentGrid">
+                <!-- Listings loaded dynamically from Firebase -->
+                <div class="loading-spinner" id="loadingSpinner">
+                    <div class="spinner"></div>
+                    <p>Loading inventory...</p>
+                </div>
+                <p class="no-listings" id="noListings" style="display:none;">No equipment currently listed. Check back soon or contact us about what you're looking for.</p>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="py-5">
+    <!-- Past Equipment -->
+    <section class="section section-alt">
         <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">Frequently Asked Questions</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item" data-aos="fade-up">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    Standard-flow vs high-flow hydraulics
-                                </button>
-                            </h3>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Do I really need high-flow hydraulics? In most cases, no. The majority of day-to-day skid steer work - landscaping, construction cleanup, dirt work, material handling, and general maintenance - runs perfectly with standard-flow hydraulics. High flow is only necessary for a small group of specialized, high-power attachments.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    What's the difference between standard-flow and high-flow?
-                                </button>
-                            </h3>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Standard-flow hydraulics deliver the power needed for most common attachments. High-flow systems provide extra hydraulic output for a limited number of heavy-duty tools. Unless you regularly operate those specialized attachments, standard-flow is the better fit.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    Which attachments actually require high-flow?
-                                </button>
-                            </h3>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    High-flow is typically only needed for:
-                                    <ul>
-                                        <li>Asphalt cold planers</li>
-                                        <li>Forestry mulchers</li>
-                                        <li>Large stump grinders</li>
-                                        <li>Large snow blowers</li>
-                                        <li>High-production brush cutters</li>
-                                    </ul>
-                                    If you don't rely on these tools, standard-flow will handle your work just fine.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    Will standard-flow attachments perform well?
-                                </button>
-                            </h3>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Yes. Most attachments sold today are specifically designed to work efficiently with standard-flow hydraulics. For the vast majority of jobs, you will see full performance without the added cost of a high-flow machine.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                    What are the advantages of choosing standard-flow?
-                                </button>
-                            </h3>
-                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Customers appreciate that standard-flow machines offer:
-                                    <ul>
-                                        <li>Lower purchase price</li>
-                                        <li>Lower maintenance and repair costs</li>
-                                        <li>Better compatibility with everyday attachments</li>
-                                        <li>Reduced fuel consumption</li>
-                                        <li>Simple, reliable operation</li>
-                                    </ul>
-                                    For most buyers, this means better performance and better value.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
-                                    Can I still use heavy-duty attachments without high-flow?
-                                </button>
-                            </h3>
-                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Absolutely. Many heavy-duty attachments have standard-flow versions that deliver excellent results. Unless you're in forestry or asphalt milling, a standard-flow machine is typically the ideal choice.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
-                                    What if I'm not sure which hydraulic system I need?
-                                </button>
-                            </h3>
-                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    We can help. Tell us what attachments you use and what type of work you do each day. Most customers discover that standard-flow offers everything they need - without the added cost of high-flow.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="700">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
-                                    Are standard-flow machines still powerful?
-                                </button>
-                            </h3>
-                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Definitely. Hydraulic flow is only one part of what makes a skid steer strong. Standard-flow machines still provide impressive lift capacity, breakout force, and pushing power for everyday real-world work.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="800">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
-                                    What's the best setup if I use many different attachments?
-                                </button>
-                            </h3>
-                            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    For mixed or general-purpose work - landscaping, farm chores, property maintenance - standard-flow delivers the best blend of versatility, performance, and value.
-                                </div>
-                            </div>
-                        </div>
+            <h2 class="section-title">Past Equipment</h2>
+            <p class="section-subtitle">Contact us if there is a make/model you are looking for</p>
+            <div class="equipment-grid" id="pastEquipmentGrid">
+                <div class="loading-spinner" id="pastLoadingSpinner">
+                    <div class="spinner"></div>
+                </div>
+                <p class="no-listings" id="noPastListings" style="display:none;"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <p>My goal is to help connect buyers with quality equipment that is in great condition and for a fair price. No one likes leaving the dealership lot knowing they instantly lost $10k just for leaving the parking lot.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="true">
+                        Standard-flow vs high-flow hydraulics
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06z"/></svg>
+                    </button>
+                    <div class="faq-answer open">
+                        <p>Do I really need high-flow hydraulics? In most cases, no. The majority of day-to-day skid steer work - landscaping, construction cleanup, dirt work, material handling, and general maintenance - runs perfectly with standard-flow hydraulics. High flow is only necessary for a small group of specialized, high-power attachments.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="equipment" >
-        <div class="container">
-            <h2 class="text-center" data-aos="fade-up">Available inventory</h2>
-            <div class="equipment-grid" data-aos="fade-up">
-    <!-- Equipment Card 1 -->
-                <div class="equipment-card">
-                    <div class="image-carousel" data-carousel="0">
-                        <img src="/images/IMG_2701.jpeg" alt="2016 Bobcat T590" class="equipment-image active">
-                        <img src="/images/IMG_2698.jpeg" alt="Bobcat view 2" class="equipment-image">
-                        <img src="/images/IMG_2699.jpeg" alt="Bobcat view 3" class="equipment-image">
-                        <img src="/images/IMG_2700.jpeg" alt="Bobcat view 4" class="equipment-image">
-                        <img src="/images/IMG_2702.jpeg" alt="Bobcat view 5" class="equipment-image">
-                        <img src="/images/IMG_2703.jpeg" alt="Bobcat view 6" class="equipment-image">
-
-                        <button class="carousel-btn prev" onclick="changeImage(0, -1)">‹</button>
-                        <button class="carousel-btn next" onclick="changeImage(0, 1)">›</button>
-                        
-                        <div class="image-counter">
-                            <span class="current-image">1</span> / <span class="total-images">6</span>
-                        </div>
-                        
-                        <div class="image-dots">
-                            <span class="dot active" onclick="goToImage(0, 0)"></span>
-                            <span class="dot" onclick="goToImage(0, 1)"></span>
-                            <span class="dot" onclick="goToImage(0, 2)"></span>
-                            <span class="dot" onclick="goToImage(0, 3)"></span>
-                            <span class="dot" onclick="goToImage(0, 4)"></span>
-                            <span class="dot" onclick="goToImage(0, 5)"></span>
-                        </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What's the difference between standard-flow and high-flow?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Standard-flow hydraulics deliver the power needed for most common attachments. High-flow systems provide extra hydraulic output for a limited number of heavy-duty tools. Unless you regularly operate those specialized attachments, standard-flow is the better fit.</p>
                     </div>
-                    <div class="equipment-details">
-                        <div class="equipment-title">2016 Bobcat T590</div>
-                        <div class="equipment-price">Contact for Price</div>
-                        <div class="equipment-location">Utah</div>
-                        <div class="equipment-description">
-                            High-quality skid steer loader in excellent condition. Well-maintained and ready for work.
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Which attachments actually require high-flow?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>High-flow is typically only needed for:</p>
                         <ul>
-                            <li>Enclosed cab</li>
-                            <li>Heat and AC</li>
-                            <li>High Flow</li>
-                            <li>900 hours</li>
-                            <li>SJC / Joystick controls</li>
+                            <li>Asphalt cold planers</li>
+                            <li>Forestry mulchers</li>
+                            <li>Large stump grinders</li>
+                            <li>Large snow blowers</li>
+                            <li>High-production brush cutters</li>
                         </ul>
-                        </div>
-                        <div class="contact-phone">Shane: 801-935-1133</div>
-                        <div class="equipment-meta">
-                            Listed by Utah Equipment
-                        </div>
+                        <p>If you don't rely on these tools, standard-flow will handle your work just fine.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container" style="margin-top: 1rem;">
-            <h2 class="text-center" data-aos="fade-up">Past equipment</h2>
-            <p style="text-align: center;">Contact us if there is a make/model you are looking for</p>
-        </div>
-        
-        <!-- You can add more cards here with the same structure -->
-    </div>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <h2 class="text-center mb-2" data-aos="fade-up">Contact Us for Availablity</h2>
-                    <p style="text-align: center;">Shane 801-935-1133</p>
-                    <div class="contact-form" data-aos="fade-up">
-                        <form id="contactForm">
-                            <div id="submitBanner" style="display: none; text-align: center; margin-bottom: 1rem; border-bottom: 3px solid green;" class="row">
-                                <span>Thanks for reaching out! You can expect to hear back from us soon.</span>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
-                                </div>
-                            </div>                            
-                            <textarea class="form-control" rows="5" id="customer_message" placeholder="Your Message" required></textarea>
-                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                        </form>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Will standard-flow attachments perform well?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Most attachments sold today are specifically designed to work efficiently with standard-flow hydraulics. For the vast majority of jobs, you will see full performance without the added cost of a high-flow machine.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What are the advantages of choosing standard-flow?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Customers appreciate that standard-flow machines offer:</p>
+                        <ul>
+                            <li>Lower purchase price</li>
+                            <li>Lower maintenance and repair costs</li>
+                            <li>Better compatibility with everyday attachments</li>
+                            <li>Reduced fuel consumption</li>
+                            <li>Simple, reliable operation</li>
+                        </ul>
+                        <p>For most buyers, this means better performance and better value.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I still use heavy-duty attachments without high-flow?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Many heavy-duty attachments have standard-flow versions that deliver excellent results. Unless you're in forestry or asphalt milling, a standard-flow machine is typically the ideal choice.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if I'm not sure which hydraulic system I need?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We can help. Tell us what attachments you use and what type of work you do each day. Most customers discover that standard-flow offers everything they need - without the added cost of high-flow.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Are standard-flow machines still powerful?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Definitely. Hydraulic flow is only one part of what makes a skid steer strong. Standard-flow machines still provide impressive lift capacity, breakout force, and pushing power for everyday real-world work.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What's the best setup if I use many different attachments?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For mixed or general-purpose work - landscaping, farm chores, property maintenance - standard-flow delivers the best blend of versatility, performance, and value.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="instagram" class="instagram-feed py-5">
+    <!-- Contact Section -->
+    <section id="contact" class="section">
         <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">Follow Us</h2>
-            <div class="text-center mb-4">
-                <a href="https://instagram.com/utahequipment" target="_blank" class="btn btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram me-2" viewBox="0 0 16 16">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                    </svg>
-                    See Our Equipment and Customer Reviews on Instagram
-                </a>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Shane: (801) 935-1133</p>
+            <div class="contact-wrapper">
+                <div class="contact-form-card">
+                    <div id="submitBanner" class="submit-banner" style="display: none;">
+                        Thanks for reaching out! You can expect to hear back from us soon.
+                    </div>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <input type="text" class="form-input" id="name" placeholder="Your Name" required>
+                            <input type="tel" class="form-input" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <textarea class="form-input" rows="5" id="customer_message" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Instagram Section -->
+    <section class="section section-alt">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title">Follow Us</h2>
+            <a href="https://instagram.com/utahequipment" target="_blank" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align:-2px;margin-right:8px;">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                </svg>
+                See Our Equipment on Instagram
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Utah Equipment. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Utah Equipment" class="footer-logo">
+                    <span>Utah Equipment</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://instagram.com/utahequipment" target="_blank">Instagram</a>
+                    <a href="https://facebook.com/utahequipment" target="_blank">Facebook</a>
+                </div>
+                <p class="footer-copy">&copy; 2025 Utah Equipment. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize AOS
-            AOS.init({
-                duration: 800,
-                once: true
-            });
+    <!-- Equipment Detail Modal -->
+    <div class="modal-overlay" id="equipmentModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <div class="modal-carousel">
+                    <div class="modal-images" id="modalImages"></div>
+                    <button class="carousel-btn prev" id="modalPrev">&#8249;</button>
+                    <button class="carousel-btn next" id="modalNext">&#8250;</button>
+                    <div class="image-counter" id="modalCounter"></div>
+                </div>
+                <div class="modal-details" id="modalDetails"></div>
+            </div>
+        </div>
+    </div>
 
-            // Smooth scrolling
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    const navHeight = document.querySelector('.navbar').offsetHeight;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-        });
-    </script>
-    <script>
-        function changeImage(carouselId, direction) {
-            const carousel = document.querySelectorAll('[data-carousel]')[carouselId];
-            const images = carousel.querySelectorAll('.equipment-image');
-            const dots = carousel.querySelectorAll('.dot');
-            const counter = carousel.querySelector('.current-image');
-            
-            let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
-            
-            images[currentIndex].classList.remove('active');
-            dots[currentIndex].classList.remove('active');
-            
-            currentIndex = (currentIndex + direction + images.length) % images.length;
-            
-            images[currentIndex].classList.add('active');
-            dots[currentIndex].classList.add('active');
-            counter.textContent = currentIndex + 1;
-        }
-
-        function goToImage(carouselId, index) {
-            const carousel = document.querySelectorAll('[data-carousel]')[carouselId];
-            const images = carousel.querySelectorAll('.equipment-image');
-            const dots = carousel.querySelectorAll('.dot');
-            const counter = carousel.querySelector('.current-image');
-            
-            images.forEach(img => img.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            images[index].classList.add('active');
-            dots[index].classList.add('active');
-            counter.textContent = index + 1;
-        }
-
-        function scrollToContact() {
-            // Add your contact section scroll logic here
-            alert('Contact form would open or scroll to contact section');
-        }
-
-        // Optional: Add keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                changeImage(0, -1);
-            } else if (e.key === 'ArrowRight') {
-                changeImage(0, 1);
-            }
-        });
-    </script>
-    <script>
-        // ... (previous scripts remain the same) ...
-    
-        // Handle puppy inquiry buttons
-        document.querySelectorAll('.gallery-overlay .contact-btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = document.getElementById('contactForm');
-            if (form.checkValidity()) {
-
-                var data = {
-                    service_id: 'service_9va8vvg',
-                    template_id: 'template_iqf8zub',
-                    user_id: '8ede1-J_4MRQi7-up',
-                    template_params: {
-                        name: document.getElementById('name').value,
-                        customer_message: document.getElementById('customer_message').value,
-                        phone: document.getElementById('phone').value,
-                        email: ''
-                    }
-                };
-                    
-                $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-                    type: 'POST',
-                    data: JSON.stringify(data),
-                    contentType: 'application/json'
-                }).then(function(response) {
-                    console.log('here2');
-                    clearModal();
-                    $("#submitBanner").show();
-                    setTimeout(function() {
-                        $("#submitBanner").hide();
-                    }, 3000);
-                }, function(error) {
-                    clearModal();
-                });
-            }
-            // form.classList.add('was-validated');
-        });
-
-        function clearModal()
-        {
-            document.getElementById('name').value = "";
-            document.getElementById('phone').value = "";
-            document.getElementById('customer_message').value = "";
-        }
-
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
